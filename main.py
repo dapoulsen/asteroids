@@ -22,6 +22,7 @@ def main():
         pygame.display.flip()
         rv = clock.tick(60)
         dt = rv / 1000
+        player.update(dt)
 
     
 
