@@ -42,7 +42,6 @@ def main():
             if asteroid.checkCollision(player) == True:
                 sys.exit("Game over!")
         
-        for asteroid in asteroids:
             for bullet in shots:
                 if asteroid.checkCollision(bullet) == True:
                     asteroid.kill()
