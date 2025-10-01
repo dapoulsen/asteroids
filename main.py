@@ -1,6 +1,7 @@
 # this allows us to use code from
 # the open-source pygame library
 # throughout this file
+import sys
 import pygame
 from asteroidfield import AsteroidField
 from asteroids import Asteroid
@@ -34,10 +35,9 @@ def main():
 
         updatable.update(dt)
 
-        for shape in asteroids:
-            if shape.checkCollision(player) == True:
-                print("Game over!")
-                return
+        for asteroid in asteroids:
+            if asteroid.checkCollision(player) == True:
+                sys.exit("Game over!")
 
         screen.fill("black")
 
