@@ -11,7 +11,6 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     clock = pygame.time.Clock()
-    asteroidField = AsteroidField()
 
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
@@ -26,6 +25,7 @@ def main():
     dt = 0
 
 
+    asteroidField = AsteroidField()
 
     while True:
         for event in pygame.event.get():
